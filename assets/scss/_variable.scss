@@ -1,0 +1,37 @@
+// Breakpoints
+$breakpoint-m: 768px;
+$breakpoint-t: 1024px;
+$breakpoint-pc_h: 1460px;
+$breakpoint-pc_bm: 1800px;
+
+
+/* colors */
+$colors: (
+    _blue: #00274e,
+    _green: #5ac93b,
+    _black: #000,
+    _darkgrey: #3c3c3c,
+    _lightgrey: #e6e6e6,
+    _yellow: #fecb21,
+    _sky: #7bdcd7
+);
+
+@each $key, $color in $colors {
+    .fc#{$key} {
+        color: $color;
+    }
+}
+$c_blue : map-get($colors, _blue);
+$c_green : map-get($colors, _green);
+$c_black : map-get($colors, _black);
+$c_darkgrey : map-get($colors, _darkgrey);
+$c_lightgrey : map-get($colors, _lightgrey);
+$c_yellow : map-get($colors, _yellow);
+$c_sky : map-get($colors, _sky);
+
+//Font
+$font: 'Noto Sans KR', sans-serif;
+$form_fz : 16px;
+
+//innerBox
+$inner: 900px;

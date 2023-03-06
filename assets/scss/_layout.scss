@@ -1,0 +1,239 @@
+.inner {
+    max-width: $inner;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.header {
+    position: relative;
+    width: 100%;
+    background-color: #fff;
+    height: 90px;
+   
+   
+    .logo {
+        width: 100px;
+    }
+    &_util {
+        display: flex;
+        gap: 20px;
+        .user_name {
+            font-weight: bold;
+            text-decoration: underline;
+        }
+    }
+    .inner {
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+}
+
+.container {
+    padding: 50px 0;
+
+}
+
+.contents {
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 10px;
+}
+
+.input_ty1 {
+    width: 100%;
+    max-width: 600px;
+    padding: 0 15px;
+    box-sizing: border-box;
+    border-radius: 4px;
+    border: 1px solid #dcdcdc;
+    height: 50px;
+    font-size: 1em;
+}
+
+.btn {
+    display: inline-block;
+    vertical-align: top;
+    text-align: center;
+    width: 160px;
+    height: 50px;
+    line-height: 50px;
+    font-weight: bold;
+    border-radius: 4px;
+    padding: 0 10px;
+    box-sizing: border-box;
+    font-size: 1em;
+    &_area {
+        &.ty_bot {
+            margin-top: 40px;
+            display: flex;
+            justify-content: space-between;
+        }
+    }
+    &.w100 {
+        width: 100%;
+    }
+    &.btn_blue {
+        background-color: $c_blue;
+        color: #fff;
+    }
+    &.btn_green {
+        background-color: $c_green;
+        color: #fff;
+    }
+    &.btn_darkgrey {
+        background-color: $c_darkgrey;
+        color: #fff;
+    }
+    &.btn_sky {
+        background-color: $c_sky;
+        color: #fff;
+    }
+
+    &.ty_mid {
+        width: 100px;
+        height: 40px;
+        line-height: 40px;
+        font-weight: 14px;
+    }
+    &.ty_s {
+        width: auto;
+        height: 30px;
+        line-height: 30px;
+        font-size: 13px;
+    }
+}
+
+.board_list {
+    &_top {
+        display: flex;
+        justify-content: flex-end;
+        margin-bottom: 20px;
+    }
+    &_tbl {
+        &_wrap {
+            overflow: hidden;
+        }
+        &.tl_fixed {
+            table-layout: fixed;
+        }
+        border-top: 1px solid #000;
+        th {
+            font-weight: 500;
+        }
+        th, td {
+            border-bottom: 1px solid #dcdcdc;
+            padding: 12px 10px;
+            text-align: center;
+        }
+        tbody {
+            td, th {
+                font-size: 14px;
+            }
+        }
+        .tr_link {
+            cursor: pointer;
+            &:hover {
+                background-color: rgba($c_sky, .06);
+            }
+        }
+        .status {
+            &_false {
+                font-weight: bold;
+                color: #999;
+            }
+            &_true {
+                font-weight: bold;
+                color: $c_green;
+            }
+        }
+    }
+}
+
+.board_detail {
+    border-top: 1px solid #000;
+    th {
+        font-weight: 500;
+        width: 200px;
+        background-color: rgba($c_lightgrey, 0.3);
+        box-sizing: border-box;
+        text-align: left;
+    }
+    th, td {
+        border-bottom: 1px solid #dcdcdc;
+        padding: 15px 30px;
+        vertical-align: middle;
+    }
+    tbody {
+        th, td {
+            font-size: 14px;
+        }
+    }
+}
+
+.chk_toggle {
+    display: inline-block;
+    vertical-align: top;
+    position: relative;
+    cursor: pointer;
+    &_hidden {
+        position: absolute;
+        left: 0;
+        top: 0;
+        opacity: 0;
+        z-index: -9999;
+    }
+    &_btn {
+        width: 60px;
+        border-radius: 20px;
+        height: 30px;
+        background-color: #999;
+        position: relative;
+        transition: all .2s ease-in-out;
+        &::before {
+            content:'';
+            position: absolute;
+            width: 26px;
+            height: 26px;
+            left: 2px;
+            top: 2px;
+            background-color: #fff;
+            border-radius: 50%;
+            transition: all .2s ease-in-out;
+        }
+        @at-root .chk_toggle_hidden:disabled ~ & {
+            opacity: 0.18;
+            cursor: not-allowed;
+        }
+        @at-root .chk_toggle_hidden:checked ~ & {
+            background-color: $c_sky;
+            &::before {
+                left: 32px;
+            }
+        }
+    }
+    &_msg {
+        position: absolute;
+        left: 100%;
+        margin-left: 10px;
+        font-weight: bold;
+        line-height: 30px;
+        top: 0;
+        color: $c_darkgrey;
+        cursor: text;
+        &.ty_true {
+            opacity: 0;
+            color: $c_green;
+        }
+        @at-root .chk_toggle_hidden:checked ~ & {
+            &.ty_true {
+                opacity: 1;
+            }
+            &.ty_false {
+                opacity: 0;
+            }
+        }
+    }
+
+}
