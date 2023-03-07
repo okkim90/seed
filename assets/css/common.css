@@ -657,7 +657,7 @@ body {
 
 .chk_list {
   display: flex;
-  gap: 15px;
+  gap: 20px;
 }
 
 .chk_btn {
@@ -714,6 +714,23 @@ body {
   width: 200px;
 }
 
+.num_set {
+  display: flex;
+  align-items: center;
+}
+.num_set .dash {
+  margin: 0 6px;
+}
+.num_set .f_input {
+  text-align: center;
+}
+.num_set .num1 {
+  width: 80px;
+}
+.num_set .num2, .num_set .num3 {
+  width: 100px;
+}
+
 .login_wrap {
   background-color: #00274e;
   height: 100vh;
@@ -744,7 +761,7 @@ body {
   margin-top: 10px;
 }
 .login_box_btns {
-  margin-top: 30px;
+  margin-top: 60px;
   display: flex;
   align-items: center;
   justify-content: center;

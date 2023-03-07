@@ -247,7 +247,7 @@ body {
 
 .chk_list {
     display: flex;
-    gap: 15px;
+    gap: 20px;
 }
 
 .chk_btn {
@@ -301,5 +301,22 @@ body {
     flex-wrap: wrap;
     &_num {
         width: 200px;
+    }
+}
+
+.num_set {
+    display: flex;
+    align-items: center;
+    .dash {
+        margin: 0 6px;
+    }
+    .f_input {
+        text-align: center;
+    }
+    .num1 {
+        width: 80px;
+    }
+    .num2, .num3 {
+        width: 100px;
     }
 }
