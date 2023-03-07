@@ -1,3 +1,8 @@
+body {
+    min-width: 900px;
+    overflow: auto;
+}
+
 .inner {
     max-width: $inner;
     margin: 0 auto;
