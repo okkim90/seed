@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SEED</title>
+
+    <!-- datepicker -->
+    <link rel="stylesheet" href="../assets/css/jquery-ui.css">
+    <link rel="stylesheet" href="../assets/css/datepicker.css">
+    <script src="../assets/js/jquery-3.1.1.min.js"></script>
+    <script src="../assets/js/jquery-ui.js"></script>
+    <!--// datepicker -->
+
+    <link rel="stylesheet" href="../assets/css/common.css">
+</head>
+<body>
+    <div id="wrap">
+        <header class="header">
+            <div class="inner">
+                <h1 class="logo"><img src="../assets/images/logo.png" alt="SEED"></h1>
+                <div class="header_util">
+                    <div>
+                        <a href="" class="user_name">관리자</a> 님 환영합니다.
+                    </div>                   
+                    <button class="btn ty_s btn_blue">LOGOUT</button>
+                </div>
+            </div>
+        </header>
+        <main id="container" class="container">
+            <div class="inner">
+                <section class="contents">
+                    <form action="">
+                        <table class="board_detail">
+                            <caption>사용자 상세</caption>
+                            <tbody>
+                                <tr>
+                                    <th>No.</th>
+                                    <td>9999</td>
+                                </tr>
+                                <tr>
+                                    <th>등록사유 코드</th>
+                                    <td><input type="text" class="f_input"></td>
+                                </tr>
+                                <tr>
+                                    <th>등록번호 구분 코드</th>
+                                    <td><input type="text" class="f_input"></td>
+                                </tr>
+                                <tr>
+                                    <th>등록번호</th>
+                                    <td><input type="text" class="f_input"></td>
+                                </tr>
+                                <tr>
+                                    <th>등록방식 구분 코드</th>
+                                    <td><input type="text" class="f_input"></td>
+                                </tr>
+                                <tr>
+                                    <th>성명</th>
+                                    <td><input type="text" class="f_input"></td>
+                                </tr>
+                                <tr>
+                                    <th>생년월일</th>
+                                    <td><input type="text" class="f_input inp-date"></td>
+                                </tr>
+                                <tr>
+                                    <th>성별코드</th>
+                                    <td>
+                                        <div class="chk_list">
+                                            <label class="chk_btn">
+                                                <input type="radio" name="sex" class="chk_btn_hidden">
+                                                <span class="chk_btn_custom ty_radio"></span> 
+                                                남자
+                                            </label>
+                                            <label class="chk_btn">
+                                                <input type="radio" name="sex" class="chk_btn_hidden">
+                                                <span class="chk_btn_custom ty_radio"></span> 
+                                                여자
+                                            </label>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>휴대폰번호</th>
+                                    <td><input type="tel" class="f_input"></td>
+                                </tr>
+                                <tr>
+                                    <th>주소</th>
+                                    <td>
+                                        <div class="address_set">
+                                            <input type="text" class="f_input address_set_num" readonly>
+                                            <button class="btn ty_mid btn_blue">우편번호</button>
+                                            <input type="text" class="f_input">
+                                            <input type="text" class="f_input">
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>이메일</th>
+                                    <td><input type="text" class="f_input"></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        <div class="btn_area ty_bot">
+                            <a href="./user_list.html" class="btn ty_mid btn_blue">취소</a>
+                            <input type="submit" class="btn ty_mid btn_green" value="등록하기">
+                        </div>
+                    </form>
+                </section>
+            </div>
+        </main>
+    </div>
+
+    <script>
+        $(function(){
+            $.datepicker.regional['ko'] = {
+            closeText: '닫기',
+            prevText: '이전달',
+            nextText: '다음달',
+            currentText: '오늘',
+            monthNames: ['1월','2월','3월','4월','5월','6월','7월','8월','9월','10월','11월','12월'],
+            monthNamesShort: ['1월','2월','3월','4월','5월','6월','7월','8월','9월','10월','11월','12월'],
+            dayNames: ['일','월','화','수','목','금','토'],
+            dayNamesShort: ['일','월','화','수','목','금','토'],
+            dayNamesMin: ['일','월','화','수','목','금','토'],
+            weekHeader: 'Wk',
+            dateFormat: 'yy-mm-dd',
+            firstDay: 0,
+            isRTL: false,
+            showMonthAfterYear: true,
+            changeMonth: true,
+            changeYear: true
+            };
+            $.datepicker.setDefaults($.datepicker.regional['ko']);
+            
+            $(".inp-date").datepicker({
+                //showOn: "button",
+                //buttonImage: "../img/ico_calendar1.svg",
+                //buttonImageOnly: true,
+            });
+        });
+    </script>
+</body>
+</html>
