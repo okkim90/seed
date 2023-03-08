@@ -135,7 +135,7 @@ body {
         }
         th, td {
             border-bottom: 1px solid #dcdcdc;
-            padding: 12px 10px;
+            padding: 15px 10px;
             text-align: center;
         }
         tbody {
@@ -318,5 +318,17 @@ body {
     }
     .num2, .num3 {
         width: 100px;
+    }
+
+    &.ty_co {
+        .num1 {
+            width: 80px;
+        }
+        .num2 {
+            width: 60px;
+        }
+        .num3 {
+            width: 100px;
+        }
     }
 }
